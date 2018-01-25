@@ -53,8 +53,8 @@ void rotate_motor(enum motor_states dir)
 void setup()// WiFi is started inside library
 {
 	Serial.begin(115200);
-	Serial.println("\r\n\r\n--------------------------------INITIALIZING");
-	Serial.println("ESP8266_AJAX_TEST v0.1a compiled " __DATE__ "," __TIME__);
+	Serial.println("\r\n\r\n-[INITIALIZING]-");
+	Serial.println("HoboDver_AJAX_client v0.1a compiled " __DATE__ "," __TIME__);
 
 	pinMode(D0, INPUT);  //koncevik _PULLUP
 	pinMode(D1, INPUT);  //koncevik
@@ -72,7 +72,7 @@ void setup()// WiFi is started inside library
 	SPIFFS.begin(); // Not really needed, checked inside library and started if needed
 	ESPHTTPServer.begin(&SPIFFS);
 
-	Serial.println("\r\n--------------------------------INIT DONE");
+	Serial.println("\r\n-[INIT DONE]-");
 }
 
 //------------------------------------------------------------------------------------
